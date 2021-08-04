@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product eddit</title>
+</head>
+<body>
+    <h2 class="badge badge-info">Produt edditing</h3>
+    <form action="/products/{{Product._id}}?_method=PUT" method="post">
+        <div class="form-group">
+            <label for="exampleInputEmail1">Product Name</label>
+            <input type="text" name="name" class="form-control" id="exampleInputEmail1" value="{{Product.name}}">    
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Product Descripton</label>
+            <textarea type="text" rows="3" name="description" class="form-control" id="exampleInputEmail1">{{Product.description}}</textarea>   
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Product PictureUrl</label>
+            <input type="text" name="pictureUrl" class="form-control" id="exampleInputEmail1"value="{{Product.pictureUrl}}" >    
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Product price</label>
+            <input type="text" name="price" class="form-control" id="exampleInputEmail1" value="{{Product.price}}" >    
+        </div>
+        <button type="submit" class="btn btn-primary">Update Product</button>
+
+    </form>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Eddit</title>
+</head>
+<body>
+    <h2 class="badge badge-info">Technical edditing</h3>
+    <form action="/tech/{{Tech._id}}?_method=PUT" method="post">
+        <div class="form-group">
+            <label for="exampleInputEmail1">Tech Head Name</label>
+            <input type="text" name="headName" class="form-control" id="exampleInputEmail1" value="{{Tech.headName}}">    
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Tech Descripton</label>
+            <textarea type="text" rows="5" name="description" class="form-control" id="exampleInputEmail1">{{Tech.description}}</textarea>   
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Tech PictureUrl1</label>
+            <input type="text" name="pictureUrl1" class="form-control" id="exampleInputEmail1"value="{{Tech.pictureUrl1}}" >    
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Tech PictureUrl2</label>
+            <input type="text" name="pictureUrl2" class="form-control" id="exampleInputEmail1" value="{{Tech.pictureUrl2}}" >    
+        </div>
+        <button type="submit" class="btn btn-primary">Update Tech</button>
+
+    </form>
+</body>
+</html>
