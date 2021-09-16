@@ -11,6 +11,8 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var productsRouter = require('./routes/products');
 var techRouter = require('./routes/tech');
+var imgRouter = require('./routes/img');
+
 
 var app = express();
 
@@ -32,6 +34,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/products', productsRouter);
 app.use('/tech', techRouter);
+app.use('/img', imgRouter);
 
 // error handler
 app.use(function(err, req, res, next) {

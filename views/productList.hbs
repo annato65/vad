@@ -5,9 +5,44 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Product List</title>
+  <script>
+
+        function myfunction() {
+            var confirmPassword = document.getElementById('password').value
+            var password = 'vad'
+            if (confirmPassword == password) {
+                document.getElementById('show').style.display = 'block'
+                document.getElementById('form').style.display = 'none'
+            }
+            else {
+                alert("Passwords do not match.")
+            }
+        }
+
+    </script>
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
+  {{!-- Login --}}
+    <div class="container pass m-3" id="form">
+        <form>
+            <div class="alert alert-info">
+                <p><strong>please!</strong>----insert the password to see the page---</p>
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">Password</label>
+                <input type="password" class="form-control" id="password" name="password">
+            </div>
+        </form>
+        <button type="button" class="btn btn-dark" onclick="myfunction()">Submit</button>
+    </div>
+    {{!-- end login --}}
+  <div id="show" class="container hidden">
     <h3 class="text-light badge  badge-info">PRODUCT LIST</h3><br>
     <a href="/products/add" class="badge  badge-primary" role="button">Add Product</a>
 

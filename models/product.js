@@ -6,7 +6,9 @@ let ProductSchema = new Schema({
     description: {type: String, required: true, max: 600},
     pictureUrl: {type: String, required: true, max: 30},
     price: {type: String, required: true},
+   
 });
+
 
 // Export the model
 module.exports = mongoose.model('Product', ProductSchema);

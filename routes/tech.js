@@ -7,9 +7,7 @@ var Tech = require('../models/tech');
 
 
 /* GET tech listing. */
-router.get('/admin', function(req, res, next) {
-  res.render('tech/techLogin');
-});
+
 router.get('/add', function(req, res, next) {
     res.render('tech/add');
   });

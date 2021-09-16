@@ -6,11 +6,8 @@ var bodyParser = require('body-parser')
 
 // var bodyParser = require('body-parser')
 var Product = require('../models/product');
-
 /* GET products listing. */
-router.get('/admin', function(req, res, next) {
-  res.render('loginPage');
-});
+
 router.get('/add', function(req, res, next) {
     res.render('add');
   });
@@ -53,6 +50,5 @@ router.get('/:id/eddit', function(req, res, next) {
     .catch(next)
     
 }) 
-
 
 module.exports = router;
